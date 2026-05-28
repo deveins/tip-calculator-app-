@@ -10,7 +10,7 @@ It focuses on clean UI, real-time state updates, and accessibility-aware form be
 
 ## 🚀 Live Demo
 
-> Add your live link here once deployed
+> deveins.github.io/tip-calculator-app
 
 ---
 

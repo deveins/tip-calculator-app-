@@ -1,0 +1,53 @@
+@use '../abstracts/variables' as *;
+
+.result-display {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-inline: 1.5rem;
+    padding: 2.25rem 1.5rem 1.5rem;
+    background-color: $color-surface-dark;
+    border-radius: 1rem;
+
+    @media (min-width: 48rem) {
+        flex: 1;
+        padding: 2.5rem;
+        margin: 0;
+    }
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.result-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+        width: 55%;
+        color: $color-text;
+        font-weight: 700;
+    }
+
+    .description {
+        font-size: 0.8125rem;
+        color: $color-muted;
+        font-weight: 700;
+    }
+
+    .result-amount {
+        font-size: 2rem;
+        letter-spacing: -0.65px;
+        color: $color-primary;
+        font-weight: 700;
+
+        @media (min-width: 48rem) {
+            font-size: 3rem;
+            letter-spacing: -1px;
+        }
+    }
+}

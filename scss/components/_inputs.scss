@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+
+.input-container {
+    position: relative;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: $color-text-secondary;
+    font-weight: 700;
+    margin-bottom: 0.375rem;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 0.391rem 1.0625rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: right;
+    font-family: inherit;
+    color: $color-surface-dark;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: $color-surface-light;
+
+    &::placeholder {
+        color: $color-surface-dark;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+    }
+
+    &:focus::placeholder {
+        opacity: 0;
+    }
+
+    &.input-error {
+        outline: 2px solid $color-error;
+        outline-offset: 2px;
+    }
+}
+
+.input-container img {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.error-message {
+    font-size: 0.875rem;
+    color: $color-error;
+}
+
+.hidden {
+    display: none;
+}

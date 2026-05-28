@@ -1,0 +1,83 @@
+@use '../abstracts/variables' as *;
+
+.tip-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+
+    @media (min-width: 48rem) {
+        row-gap: 1rem;
+        column-gap: 0.875rem;
+        margin-bottom: 2.5rem;
+    }
+
+    legend {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: $color-text-secondary;
+        font-weight: 700;
+    }
+}
+
+.tip-option {
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: inherit;
+    color: $color-text;
+    text-align: center;
+    cursor: pointer;
+    background-color: $color-surface-dark;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        color: $color-surface-dark;
+        background-color: $color-button-hover;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+    }
+}
+
+.active-option {
+    background-color: $color-primary;
+
+    &:hover {
+        color: $color-text;
+        background-color: $color-primary;
+    }
+}
+
+.custom-tip {
+    background-color: $color-surface-light;
+    color: $color-surface-dark;
+
+    &::placeholder {
+        color: $color-text-secondary;
+    }
+
+    &:hover {
+        color: $color-surface-dark;
+        background-color: $color-surface-light;
+    }
+    
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

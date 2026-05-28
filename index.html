@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/deveins-symbol.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Tip calculator app</title>
+</head>
+<body>
+
+  <main class="app">
+
+    <header class="header">
+      <h1 class="logo">
+        <img src="images/logo.svg" alt="Splitter">
+      </h1>
+    </header>
+
+    <div class="container">
+      <form class="calculator" novalidate>
+        <div class="input-group amount">
+          <label for="amount-input">Bill</label>
+          <div class="input-container">
+            <input type="number" name="amount-input" id="amount-input" placeholder="0" min="0" autocomplete="off" />
+            <img src="images/icon-dollar.svg" alt="" aria-hidden="true">
+          </div>
+        </div>
+
+        <div class="tip">
+          <fieldset class="tip-options">
+            <legend>Select Tip %</legend>
+            <button type="button" class="tip-option active-option" data-tip="5">5%</button>
+            <button type="button" class="tip-option" data-tip="10">10%</button>
+            <button type="button" class="tip-option" data-tip="15">15%</button>
+            <button type="button" class="tip-option" data-tip="25">25%</button>
+            <button type="button" class="tip-option" data-tip="50">50%</button>
+            <label for="custom-tip" class="sr-only">Custom tip percentage</label>
+            <input type="number" name="custom-tip" id="custom-tip" class="tip-option custom-tip" placeholder="Custom" min="0" autocomplete="off">
+          </fieldset>
+
+          <div class="input-group people">
+            <label for="number-of-people">Number of People
+              <span class="error-message hidden" id="error-message" aria-live="polite">Can't be zero</span>
+            </label>
+            <div class="input-container">
+              <input type="number" name="number-of-people" id="number-of-people" class="number-of-people" placeholder="1" min="1" value="1" autocomplete="off">
+              <img src="images/icon-person.svg" alt="" aria-hidden="true">
+            </div>
+          </div>
+        </div>
+
+      </form>
+    
+      <section class="result-display">
+        <div class="result">
+          <div class="tip-result">
+            <div class="result-content">
+              <div class="text">
+                <p class="title">Tip Amount</p>
+                <p class="description">/ person</p>
+              </div>
+              <output class="result-amount" id="tip-amount">$0.00</output>
+            </div>
+          </div>
+          <div class="total-result">
+            <div class="result-content">
+              <div class="text">
+                <p class="title">Total</p>
+                <p class="description">/ person</p>
+              </div>
+              <output class="result-amount" id="total-amount">$0.00</output>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="reset-btn" id="reset-btn" disabled>Reset</button>
+      </section>
+      
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

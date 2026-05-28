@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as *;
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+
+    @media (min-width: 48rem) {
+        width: 45%;
+        padding: 1rem;
+        gap: 2.5rem;
+    }
+}

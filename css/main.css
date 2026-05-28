@@ -197,6 +197,7 @@ img {
 }
 @media (min-width: 48rem) {
   .tip-options {
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
     column-gap: 0.875rem;
     margin-bottom: 2.5rem;

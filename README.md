@@ -1,6 +1,6 @@
 
 
-# 💸 Tip Calculator App
+# Tip Calculator App
 
 A modern, responsive tip calculator built with vanilla JavaScript. This project calculates tip amounts and total cost per person based on bill value, selected tip percentage, and number of people.
 
@@ -10,7 +10,7 @@ It focuses on clean UI, real-time state updates, and accessibility-aware form be
 
 ## 🚀 Live Demo
 
-> deveins.github.io/tip-calculator-app
+> https://deveins.github.io/tip-calculator-app
 
 ---
 
